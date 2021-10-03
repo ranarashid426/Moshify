@@ -5,6 +5,12 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 html {
   /* By default it is 16 px */
   /* 62.5% of 16 px is 10px */
@@ -151,4 +157,59 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+.btn {
+  text-decoration: none;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  font-size: 18px;
+  padding: 2rem 4vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 2rem 0;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn--accent:hover {
+  background: #e63f16;
+}
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #16cbeb;
+}
+.btn--stretched {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.btn--block {
+  display: inline-block;
+  width: 100%;
+}
+.btn--outline {
+  background: #fff;
+  border: 1px solid var(--color-headings);
+  color: var(--color-headings);
+}
+.btn--outline:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    padding: 2rem 4rem;
+    font-size: 15px;
+  }
 }
