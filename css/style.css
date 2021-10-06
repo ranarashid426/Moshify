@@ -144,11 +144,19 @@ a {
   width: 40px;
   height: 40px;
 }
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
 .icon--primary {
   fill: var(--color-primary);
 }
 .icon--secondary {
   fill: var(--color-secondary);
+}
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -159,6 +167,9 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 /* Buttons */
@@ -191,8 +202,8 @@ a {
   background: #16cbeb;
 }
 .btn--stretched {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .btn--block {
@@ -391,4 +402,112 @@ a {
   .quote__company {
     font-size: 1.6rem;
   }
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 3rem;
+}
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+}
+/* Callout */
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+.callout--heading {
+  font-size: 3rem;
+  margin: 0;
+  color: #fff;
+}
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+.callout--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.callout-content {
+  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .callout-content {
+    text-align: start;
+    font-size: 2rem;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    align-self: center;
+    margin-left: 5rem;
+  }
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* Collapsible */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.4s;
+}
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0deg);
+}
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
