@@ -640,7 +640,8 @@ a {
 /* Domain Block Component */
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
-  margin: 4rem 0;
+  margin: 4rem auto;
+  max-width: 670px;
 }
 
 .block-domain__prices {
@@ -650,7 +651,8 @@ a {
   font-size: 2rem;
   font-weight: 600;
   justify-items: center;
-  /* max-width: ; */
+  max-width: 700px;
+  margin: 0 auto;
 }
 .block-domain__prices li a {
   color: var(--color-headings);
