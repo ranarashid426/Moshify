@@ -47,6 +47,10 @@ p {
   margin-top: 0;
 }
 
+.text--small {
+  font-size: 2rem;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -536,9 +540,8 @@ a {
 
 /* Blocks */
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 5rem;
   padding: var(--padding-vertical) 2rem;
-  /* border: 2px solid red; */
 }
 .block__header {
   text-align: center;
@@ -566,7 +569,7 @@ a {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  /* padding: 2rem; */
+  padding: 1rem 2rem;
 }
 /* Navbar */
 
@@ -703,4 +706,25 @@ a {
 .plans--block .grid {
   grid-gap: 6rem 4rem;
   /* row-gap: 10rem; */
+}
+
+/* Feature */
+
+.feature {
+  grid-gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+.feature__img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
